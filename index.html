@@ -3,78 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rachel Gillespie - Design Portfolio</title>
+    <title>Rachel Gillespie</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playball&display=swap');
-    </style>
 </head>
 <body>
     <header>
-        <a href="https://rachel-gillespie.github.io/"><h1>Rachel Gillespie</h1></a>
+        <div class="logo"></div>
         <nav>
             <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <img src="images/your-photo.jpg" alt="Rachel Gillespie's Professional Photo">
-                <h1>Rachel Gillespie</h1>
-                <p class="introduction">I am enrolled in a BA (Hons) program in Visual Communications and Design at South East Technological University. In addition, I hold a BTEC Level 3 Diploma in Creative Media Production and a Professional Diploma in Graphic Design.</p>
-                <p class="introduction">I have a strong interest in design and technology, and I aim to pursue a career in digital design, UI/UX, or web and app design and development. I am passionate about and have experience in PC and console gaming.</p>
-                <p class="introduction">Over the past three years of studying Visual Communications, I have acquired various skills. I am proficient in Adobe Illustrator, Photoshop, InDesign, and XD, as well as web languages including HTML, CSS, JavaScript, PHP, and MySQL. Additionally, I have experience with Balsamiq and Figma. I have also completed three marketing modules: Introduction to Marketing, Marketing Mix, and Marketing Management.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="button">Contact</a>
-                    <a href="#projects" class="button secondary">View My Work</a>
-                </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome!</h1>
+            <p>Visual Communications and Design Student Portfolio</p>
+            <div class="hero-buttons">
+                <button class="contact-button">Contact</button>
+                <button class="view-work-button">View My Work</button>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="services">
-            <h2>My Skills</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3>Web Design and Development</h3>
-                    <p>Experienced in creating user-friendly and responsive websites using HTML, CSS, JavaScript, and more.</p>
-                </div>
-                <div class="service-item">
-                    <h3>UI/UX Design</h3>
-                    <p>Passionate about crafting intuitive and engaging user interfaces and seamless user experiences.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Brand Design</h3>
-                    <p>Skilled in developing visual identities that effectively communicate brand values and resonate with target audiences.</p>
-                </div>
+    <section class="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Web Design and Development</h3>
+                <p>Experienced in creating user-friendly and responsive websites using HTML, CSS, JavaScript, and more.</p>
             </div>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                </div>
-        </section>
-
-        <section id="resume">
-            <h2>Resume</h2>
-            </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-            </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            </section>
-    </main>
+            <div class="skill-card">
+                <h3>UI/UX Design</h3>
+                <p>Passionate about crafting intuitive and engaging user interfaces and seamless user experiences.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Brand Design</h3>
+                <p>Skilled in developing visual identities that effectively communicate brand values and resonate with target audiences.</p>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Rachel Gillespie. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="copyright">
+                <span class="logo-symbol"></span> © 2025 Rachel Gillespie. All rights reserved.
+            </div>
+            <div class="social-links">
+                <a href="#" target="_blank"><span class="linkedin-icon"></span></a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
