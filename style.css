@@ -270,3 +270,48 @@ footer {
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+.contact-info {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-info h1 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    display: inline-flex;
+    align-items: center;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+}
+
+.contact-info img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
