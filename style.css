@@ -7,20 +7,19 @@ body {
 }
 
 header {
-    background-color: #5c6bc0; /* A shade of purple from the design */
+    background-color: #303f9f; /* Darker purple for the header background */
     color: white;
-    padding: 20px;
+    padding: 20px 30px; /* Add some horizontal padding */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space out logo and navigation */
     align-items: center;
 }
 
 .logo {
-    /* You can add your logo image or style it with CSS */
-    width: 30px;
-    height: 30px;
-    background-color: white; /* Placeholder for logo */
-    border-radius: 50%;
+    /* If you have a specific logo image, you can use that here */
+    /* Otherwise, we can style the text "Rachel Gillespie" */
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 nav ul {
@@ -31,12 +30,18 @@ nav ul {
 }
 
 nav li {
-    margin-left: 20px;
+    margin-left: 30px; /* Increase spacing between links */
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-size: 1em;
+}
+
+nav a:hover {
+    /* Add a subtle hover effect if you like */
+    text-decoration: underline;
 }
 
 .hero {
