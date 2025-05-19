@@ -142,20 +142,6 @@ footer {
             padding: 20px;
         }
 
-
-body {
-    font-family: sans-serif;
-    margin: 40px;
-    background-color: #f4f4f4; /* Light grey background */
-    color: #333; /* Dark grey text */
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #222; /* Darker heading text */
-}
-
 .introduction {
     display: flex;
     gap: 40px;
