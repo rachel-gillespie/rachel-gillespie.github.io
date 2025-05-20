@@ -11,13 +11,29 @@
     --color-text-light: var(--color-light-gray);
 }
 
+h1, h2, h3{
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Basic Reset & Body Styles */
 body {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
     margin: 0;
-    font-family: Arial, sans-serif; /* You can change this to a font of your choice later */
     line-height: 1.6;
     color: var(--color-text-dark); /* Default text color */
     background-color: var(--color-light-gray); /* Default background color */
+}
+
+p {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
 }
 
 /* Global Styles */
@@ -66,9 +82,9 @@ nav {
 /* Adjust logo styling */
 .logo a {
     color: var(--color-dark-plum); /* Logo text color */
-    font-family: 'Times New Roman', serif; /* Simulating the handwritten font style */
-    font-size: 1.5rem; /* Smaller font size for logo */
-    font-weight: normal; /* Normal weight for the script-like font */
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     text-decoration: none;
 }
 
