@@ -909,3 +909,305 @@ footer p {
         grid-template-columns: 1fr; /* Single column for gallery */
     }
 }
+
+/* Resume Page Styles */
+.resume-page {
+    padding-top: 50px; /* Space from header */
+    background-color: var(--color-light-gray);
+    color: var(--color-dark-plum);
+}
+
+.resume-page .page-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.resume-page .page-intro h1 {
+    font-size: 3.5rem;
+    color: var(--color-dark-plum);
+    margin-bottom: 20px;
+    border-left: none; /* Remove left border from general page-intro style */
+    padding-left: 0;
+}
+
+.resume-content-section {
+    padding: 40px 0;
+    background-color: #fff; /* White background for the resume content area */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    border-radius: 8px;
+    max-width: 1000px; /* Max width for the resume content block */
+    margin: 0 auto 80px; /* Center and add bottom margin */
+    padding: 0; /* Reset internal padding as we'll apply it to sub-sections */
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Sidebar (1 part), Main Content (2 parts) */
+    gap: 40px;
+}
+
+/* Resume Sidebar Styles */
+.resume-sidebar {
+    background-color: var(--color-dark-plum); /* Dark plum background for sidebar */
+    color: var(--color-light-gray); /* Light text for sidebar */
+    padding: 40px 30px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.resume-sidebar h3 {
+    font-size: 1.8rem;
+    color: var(--color-green); /* Green headings for sidebar sections */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white separator */
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info p i {
+    margin-right: 10px;
+    color: var(--color-indigo); /* Indigo icons */
+}
+
+.resume-social-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.resume-social-links a {
+    color: var(--color-light-gray);
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.resume-social-links a:hover {
+    color: var(--color-green);
+}
+
+.resume-social-links a i {
+    margin-right: 10px;
+    font-size: 1.2rem; /* Larger icon size for social links */
+    color: var(--color-indigo);
+}
+
+.skills-section {
+    margin-top: 40px;
+}
+
+.skills-section h4 {
+    font-size: 1.2rem;
+    color: var(--color-indigo); /* Indigo for sub-headings */
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-section ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Resume Main Content Styles */
+.resume-main-content {
+    padding: 40px 30px;
+}
+
+.resume-main-content h2 {
+    font-size: 2.2rem;
+    color: var(--color-dark-teal); /* Dark teal for main section headings */
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-green); /* Green underline for main sections */
+}
+
+.summary-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.experience-section,
+.education-section {
+    margin-bottom: 40px;
+}
+
+.resume-item {
+    margin-bottom: 30px;
+}
+
+.resume-item h3 {
+    font-size: 1.4rem;
+    color: var(--color-dark-plum);
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.resume-item .job-company {
+    font-weight: normal;
+    color: #666; /* Lighter color for company name */
+    font-size: 1.2rem;
+}
+
+.resume-item .job-duration {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 10px;
+    display: block; /* Ensure it takes its own line */
+}
+
+.resume-item ul {
+    list-style: disc; /* Use disk bullets for bullet points */
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.resume-item ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustments for Resume Page */
+@media (max-width: 992px) {
+    .resume-grid {
+        grid-template-columns: 1fr; /* Stack sidebar and main content */
+    }
+
+    .resume-sidebar {
+        border-radius: 8px 8px 0 0; /* Adjust border radius for stacked layout */
+        padding-bottom: 20px; /* Less padding if stacked */
+    }
+
+    .resume-main-content {
+        padding-top: 20px; /* Less padding if stacked */
+    }
+
+    .resume-main-content h2 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    .resume-item h3 {
+        flex-direction: column; /* Stack job title and company */
+        align-items: flex-start;
+    }
+
+    .resume-item .job-company {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .resume-page .page-intro h1 {
+        font-size: 2.8rem;
+    }
+
+    .resume-sidebar,
+    .resume-main-content {
+        padding: 20px;
+    }
+
+    .resume-sidebar h3,
+    .resume-main-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-info p,
+    .skills-section h4,
+    .skills-section ul li,
+    .summary-section p,
+    .resume-item h3,
+    .resume-item .job-duration,
+    .resume-item ul li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Inside your style.css */
+
+/* Additional Information Section */
+.additional-info {
+    margin-top: 40px;
+}
+
+.additional-info h3 {
+    font-size: 1.8rem;
+    color: var(--color-green); /* Green headings for sidebar sections */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white separator */
+}
+
+/* Style to remove bullet points for specific resume items */
+.resume-item.no-bullets ul {
+    list-style: none;
+    padding-left: 0;
+}
+.resume-item.no-bullets ul li {
+    margin-bottom: 0; /* Adjust spacing if needed */
+}
+
+/* Adjustments for resume item in sidebar without bullet points */
+.resume-sidebar .resume-item.no-bullets h3 {
+    color: var(--color-light-gray); /* Match sidebar text color */
+    border-bottom: none; /* No border for these items */
+    padding-bottom: 0;
+    font-size: 1.2rem; /* Slightly smaller heading */
+}
+.resume-sidebar .resume-item.no-bullets .job-company {
+    color: rgba(255, 255, 255, 0.7); /* Lighter company name */
+    font-size: 1rem;
+}
+.resume-sidebar .resume-item.no-bullets .job-duration {
+    color: rgba(255, 255, 255, 0.5); /* Even lighter duration */
+    font-size: 0.8rem;
+}
+
+/* Referees Section */
+.referees-section {
+    margin-top: 40px;
+    margin-bottom: 40px; /* Ensure space before footer */
+}
+
+.referees-section h2 {
+    font-size: 2.2rem;
+    color: var(--color-dark-teal);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-green);
+}
+
+.referees-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-dark-plum);
+}
+
+/* Responsive adjustments for Resume Page - specific for sidebar items */
+@media (max-width: 992px) {
+    .resume-sidebar .resume-item.no-bullets h3,
+    .resume-sidebar .resume-item.no-bullets .job-company,
+    .resume-sidebar .resume-item.no-bullets .job-duration {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
