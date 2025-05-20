@@ -3,64 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rachel Gillespie</title>
+    <title>Rachel Gillespie - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bd3a3d372a.js" crossorigin="anonymous"></script>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Notable&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap'); </style>
 </head>
 <body>
     <header>
-        <div class="logo">Rachel Gillespie</div>
         <nav>
+            <div class="logo">
+                <a href="index.html">Rachel Gillespie</a>
+            </div>
             <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="contact-info">
-        <h1>Get in Touch</h1>
-        <p>We'd love to hear from you! Here's how you can reach us:</p>
-        <ul>
-            <li>
-                <a href="tel:+353879101235">
-                    <img src="phone-icon.png" alt="Phone"> +353 87 910 1235
-                </a>
-            </li>
-            <li>
-                <a href="mailto:gillespierachel74@gmail.com">
-                    <img src="email-icon.png" alt="Email"> gillespierachel74@gmail.com
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/yourprofile" target="_blank">
-                    <img src="twitter-icon.png" alt="Twitter"> Twitter
-                </a>
-            </li>
-            <li>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">
-                    <img src="linkedin-icon.png" alt="LinkedIn"> LinkedIn
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/yourprofile" target="_blank">
-                    <img src="github-icon.png" alt="GitHub"> GitHub
-                </a>
-            </li>
-        </ul>
-    </section>
+     <main class="contact-page">
+        <section class="page-intro">
+            <h1>Get in Touch</h1>
+            <p>Have a project in mind, a question, or just want to say hello? I'd love to hear from you!</p>
+        </section>
+
+        <section class="contact-content-section">
+            <div class="content-wrapper contact-grid">
+                <div class="contact-info-block">
+                    <h2>Contact Details</h2>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:gillespierachel74@gmail.com">gillespierachel74@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> Phone: <a href="tel:+353879101235">087 910 1235</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Location: Dublin, Ireland</p>
+
+                    <h3>Connect with me:</h3>
+                    <div class="contact-social-links">
+                        <a href="www.linkedin.com/in/rachelgillespie" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/rachel-gillespie" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.instagram.com/rachelg.design/" target="_blank" aria-label="Instagram Profile"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.flickr.com/photos/202202748@N03/" target="_blank" aria-label="Flickr Profile"><i class="fab fa-flickr"></i> Flickr</a>
+                        </div>
+                </div>
+
+                <div class="contact-form-block">
+                    <h2>Send a Message</h2>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeMl5lWCvtpCW922BCpNsROqWxY6X9w4M9M9BizKvrLLeAsDg/viewform?embedded=true" width="640" height="956" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <p class="form-note">
+                        Your message will be sent via Google Forms.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <div class="footer-content">
-            <div class="copyright">
-                <span class="logo-symbol"></span> © 2025 Rachel Gillespie. All rights reserved.
-            </div>
+            <div class="footer-logo">
+        <i class="fas fa-star"></i> </div>
+            <p>&copy; <span id="current-year"></span> Rachel Gillespie. All rights reserved.</p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/rachelgillespie/" target="_blank"><span class="linkedin-icon"></span></a>
-            </div>
+        <a href="https://www.linkedin.com/in/rachelgillespie/" target="_blank" aria-label="LinkedIn Profile">
+            <i class="fab fa-linkedin"></i> </a>
+            <a href="https://github.com/rachel-gillespie" target="_blank" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/rachelg.design/" target="_blank" aria-label="Instagram Profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.flickr.com/photos/202202748@N03/" target="_blank" aria-label="Flickr Profile">
+                    <i class="fab fa-flickr"></i>
+                </a>
+        </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

@@ -1211,3 +1211,208 @@ footer p {
         font-size: 0.9rem; /* Adjust font size for smaller screens */
     }
 }
+
+/* Contact Page Styles */
+.contact-page {
+    padding-top: 50px; /* Space from header */
+    background-color: var(--color-light-gray);
+    color: var(--color-dark-plum);
+}
+
+.contact-page .page-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-page .page-intro h1 {
+    font-size: 3.5rem;
+    color: var(--color-dark-plum);
+    margin-bottom: 15px;
+    border-left: none; /* Remove left border from general page-intro style */
+    padding-left: 0;
+}
+
+.contact-page .page-intro p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: var(--color-dark-plum);
+}
+
+.contact-content-section {
+    padding: 40px 0 80px; /* Adjust padding bottom for footer */
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Info block (1 part), Form (1.5 parts) */
+    gap: 60px;
+    max-width: 1000px; /* Consistent content width */
+    margin: 0 auto;
+    padding: 0 20px; /* Ensure padding on smaller screens */
+    background-color: #fff; /* White background for the content block */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.contact-info-block,
+.contact-form-block {
+    padding: 40px; /* Internal padding for each block */
+}
+
+.contact-info-block {
+    background-color: var(--color-dark-plum); /* Dark plum background for info block */
+    color: var(--color-light-gray); /* Light text for info block */
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.contact-info-block h2 {
+    font-size: 2.2rem;
+    color: var(--color-green); /* Green heading */
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-info-block p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.contact-info-block p i {
+    margin-right: 15px;
+    color: var(--color-indigo); /* Indigo icons */
+    font-size: 1.4rem;
+}
+
+.contact-info-block p a {
+    color: var(--color-light-gray); /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-block p a:hover {
+    color: var(--color-green); /* Hover color */
+}
+
+.contact-info-block h3 {
+    font-size: 1.5rem;
+    color: var(--color-indigo); /* Indigo for sub-heading */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-social-links {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between social links */
+}
+
+.contact-social-links a {
+    color: var(--color-light-gray);
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.contact-social-links a:hover {
+    color: var(--color-green);
+}
+
+.contact-social-links a i {
+    margin-right: 8px;
+    font-size: 1.4rem;
+    color: var(--color-indigo);
+}
+
+
+/* Contact Form Styles */
+.contact-form-block h2 {
+    font-size: 2.2rem;
+    color: var(--color-dark-plum); /* Dark plum heading */
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-green);
+}
+
+.contact-form button.button-dark {
+    width: auto; /* Override button's default width if it was full-width */
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.form-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 25px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+/* Responsive adjustments for Contact Page */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack blocks vertically */
+        gap: 40px;
+    }
+
+    .contact-info-block {
+        border-radius: 8px 8px 0 0; /* Adjust border radius for stacked layout */
+    }
+
+    .contact-form-block {
+        padding-top: 0; /* No top padding if stacked */
+    }
+
+    .contact-page .page-intro h1 {
+        font-size: 2.8rem;
+    }
+
+    .contact-page .page-intro p {
+        font-size: 1rem;
+    }
+
+    .contact-info-block h2,
+    .contact-form-block h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-info-block p,
+    .contact-info-block h3,
+    .contact-social-links a,
+    .contact-form label,
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-info-block,
+    .contact-form-block {
+        padding: 30px 20px;
+    }
+
+    .contact-info-block h2,
+    .contact-form-block h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-info-block p i,
+    .contact-social-links a i {
+        font-size: 1.2rem;
+    }
+
+    .contact-form button.button-dark {
+        width: 100%; /* Make button full width on very small screens */
+    }
+}
