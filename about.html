@@ -3,61 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rachel Gillespie</title>
+    <title>Rachel Gillespie - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bd3a3d372a.js" crossorigin="anonymous"></script>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Notable&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap'); </style>
 </head>
+
 <body>
     <header>
-        <div class="logo">Rachel Gillespie</div>
         <nav>
+            <div class="logo">
+                <a href="index.html">Rachel Gillespie</a>
+            </div>
             <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-        <h1>About me</h1>
+<main class="about-page">
+        <section class="page-intro">
+            <h1>About me</h1>
+        </section>
 
-
-    <section class="introduction">
-        <div class="image-placeholder"></div>
-        <div class="text">
-            <h2>Introduction</h2>
-            <p>I am enrolled in a BA (Hons) program in Visual Communications and Design at South East Technological University, and I also hold a BTEC Level 3 Diploma in Creative Media Production and a Professional Diploma in Graphic Design.</p>
-            <p>Over the past three years of studying Visual Communications, I have acquired various skills, including proficiency in Figma, Adobe Photoshop, InDesign, and XD, as well as web-based languages including HTML, CSS, Javascript, PHP, and MySQL. Additionally, I have experience with Balsamiq and Figma. I have also gained foundational knowledge through an Introduction to Marketing, Marketing Mix, and Marketing Management.</p>
-        </div>
-    </section>
-
-    <section class="interests">
-        <h2>Interests and hobbies</h2>
-        <p>I have a strong interest in design and technology, and I aim to pursue a career in digital design, UI/UX, or web and app design and development. In my free time, I am passionate about and have experience in PC and console gaming.</p>
-        <div class="image-grid">
-            <div class="image-item"></div>
-            <div class="image-item"></div>
-            <div class="image-item"></div>
-        </div>
-    </section>
-
-    <section class="experience">
-        <p><strong>Agency name</strong> <span>2024</span></p>
-        <p><strong>Studio name</strong> <span>2025</span></p>
-        <p><strong>Company name</strong> <span>2021</span></p>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="copyright">
-                <span class="logo-symbol"></span> © 2025 Rachel Gillespie. All rights reserved.
+        <section class="about-section introduction-section">
+            <div class="content-wrapper">
+                <div class="about-image-placeholder">
+                    </div>
+                <div class="intro-text">
+                    <h2>Introduction</h2>
+                    <p>I am enrolled in a BA (Hons) program in Visual Communications and Design at South East Technological University. Previously, I got a BTEC Level 3 diploma in Creative Media Production and a Professional Diploma in Graphic Design.</p>
+                    <p>Over the past three years of studying Visual Communications, I have acquired various skills. I am proficient in Adobe Illustrator, Photoshop, InDesign, and XD. I know web languages including HTML, CSS, JavaScript, PHP, and MySQL. Additionally, I have experience with Laravel and Wordpress. I have also completed three marketing modules: Introduction to Marketing, Marketing Mix, and Marketing Management.</p>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/rachelgillespie/" target="_blank"><span class="linkedin-icon"></span></a>
-            </div>
-        </div>
-    </footer>
+        </section>
 
-    <script src="script.js"></script>
+        <section class="about-section hobbies-section">
+            <div class="content-wrapper">
+                <h2>Interests and hobbies</h2>
+                <p>I have a strong interest in design and technology, and I aim to pursue a career in digital design, UI/UX, or web and app design and development. I am passionate about and have experience in PC and console gaming.</p>
+                <div class="hobby-images">
+                    <div class="hobby-img-placeholder green-texture"></div>
+                    <div class="hobby-img-placeholder purple-texture"></div>
+                    <div class="hobby-img-placeholder white-texture"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section experience-section">
+            <div class="content-wrapper">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <h3>Agency name</h3>
+                    <span>2024</span>
+                </div>
+                <div class="experience-item">
+                    <h3>Studio name</h3>
+                    <span>2023</span>
+                </div>
+                <div class="experience-item">
+                    <h3>Company name</h3>
+                    <span>2021</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+    <i class="fas fa-star"></i> </div>
+        <p>&copy; <span id="current-year"></span> Rachel Gillespie. All rights reserved.</p>
+        <div class="social-links">
+    <a href="https://www.linkedin.com/in/rachelgillespie/" target="_blank" aria-label="LinkedIn Profile">
+        <i class="fab fa-linkedin"></i> </a>
+        <a href="https://github.com/rachel-gillespie" target="_blank" aria-label="GitHub Profile">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/rachelg.design/" target="_blank" aria-label="Instagram Profile">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.flickr.com/photos/202202748@N03/" target="_blank" aria-label="Flickr Profile">
+                <i class="fab fa-flickr"></i>
+            </a>
+    </div>
+    </div>
+</footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

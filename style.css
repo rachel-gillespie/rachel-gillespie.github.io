@@ -286,6 +286,158 @@ footer p {
     transform: translateY(-2px); /* Subtle lift effect on hover */
 }
 
+/* General Page Layout for About Page */
+.about-page {
+    padding-top: 50px; /* Space from the header */
+    background-color: var(--color-light-gray); /* Overall background */
+}
+
+.page-intro {
+    max-width: 1200px;
+    margin: 0 auto 50px; /* Center and add bottom margin */
+    padding: 0 20px;
+}
+
+.page-intro h1 {
+    font-size: 3.5rem;
+    color: var(--color-dark-plum);
+    margin-bottom: 0;
+    /* Simulate the thin red line */
+    border-left: 3px solid var(--color-indigo); /* Using indigo for the line as per palette */
+    padding-left: 20px; /* Space between line and text */
+}
+
+
+/* Reusable Content Wrapper for sections */
+.about-section .content-wrapper {
+    max-width: 1000px; /* Slightly narrower content for readability */
+    margin: 0 auto;
+    padding: 40px 20px; /* Padding for sections */
+}
+
+/* Introduction Section (with image and text) */
+.introduction-section .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Image on left (1 part), text on right (2 parts) */
+    gap: 40px; /* Space between image and text */
+    align-items: start; /* Align content to the top */
+    background-color: #fcfcfc; /* A very slight off-white for the background of this section */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    border-radius: 8px;
+    margin-bottom: 80px; /* Space below this section */
+}
+
+.about-image-placeholder {
+    width: 100%;
+    /* Use the green color for the placeholder box */
+    background-color: var(--color-green); 
+    min-height: 350px; /* Fixed height for the image placeholder */
+    border-radius: 8px; /* Match the container's border-radius */
+    /* If you put an actual image, use background-image: url() and background-size: cover; */
+}
+
+.intro-text h2 {
+    font-size: 2.2rem;
+    color: var(--color-dark-plum);
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-dark-plum);
+    margin-bottom: 15px;
+}
+
+/* Interests and Hobbies Section */
+.hobbies-section {
+    margin-bottom: 80px;
+    background-color: var(--color-light-gray); /* Keep consistent with page background */
+}
+
+.hobbies-section h2 {
+    font-size: 2.2rem;
+    color: var(--color-dark-plum);
+    margin-bottom: 20px;
+}
+
+.hobbies-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-dark-plum);
+    margin-bottom: 40px;
+}
+
+.hobby-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid for images */
+    gap: 30px;
+}
+
+.hobby-img-placeholder {
+    width: 100%;
+    padding-bottom: 100%; /* Makes the div a perfect square */
+    background-color: var(--color-light-gray); /* Default background */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-size: cover; /* For when you add actual textured images */
+    background-position: center;
+    /* These are just placeholders to match the color variation */
+    opacity: 0.8; /* Make them slightly muted */
+}
+
+/* Specific colors for the hobby image placeholders to simulate the image */
+.hobby-img-placeholder.green-texture {
+    background-color: var(--color-green); /* Or a lighter green if preferred */
+    background-image: url('https://via.placeholder.com/250x250/53DD6C/FFFFFF?text=Texture'); /* Placeholder texture */
+}
+
+.hobby-img-placeholder.purple-texture {
+    background-color: var(--color-indigo); /* Or a lighter purple */
+    background-image: url('https://via.placeholder.com/250x250/6369D1/FFFFFF?text=Texture'); /* Placeholder texture */
+}
+
+.hobby-img-placeholder.white-texture {
+    background-color: var(--color-light-gray);
+    background-image: url('https://via.placeholder.com/250x250/F5F5F5/333333?text=Texture'); /* Placeholder texture */
+}
+
+
+/* Experience Section */
+.experience-section {
+    margin-bottom: 80px;
+}
+
+.experience-section h2 {
+    font-size: 2.2rem;
+    color: var(--color-dark-plum);
+    margin-bottom: 30px;
+}
+
+.experience-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; /* Align text baselines */
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle separator line */
+}
+
+.experience-item:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.experience-item h3 {
+    font-size: 1.3rem;
+    color: var(--color-dark-plum);
+    margin: 0; /* Remove default margins */
+}
+
+.experience-item span {
+    font-size: 1.1rem;
+    color: var(--color-dark-plum);
+    font-weight: bold; /* Make the year bold */
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -333,5 +485,46 @@ footer p {
 
     .footer-logo, .social-links {
         margin: 10px 0; /* Adjust spacing */
+    }
+
+        .page-intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .introduction-section .content-wrapper {
+        grid-template-columns: 1fr; /* Stack image and text vertically */
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .about-image-placeholder {
+        min-height: 250px; /* Adjust height for smaller screens */
+    }
+
+    .intro-text h2,
+    .hobbies-section h2,
+    .experience-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .intro-text p,
+    .hobbies-section p,
+    .experience-item h3,
+    .experience-item span {
+        font-size: 1rem;
+    }
+
+    .hobby-images {
+        grid-template-columns: 1fr; /* Stack hobby images vertically */
+    }
+
+    .experience-item {
+        flex-direction: column; /* Stack company and year vertically */
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .experience-item span {
+        margin-top: 5px; /* Space between company name and year */
     }
 }
