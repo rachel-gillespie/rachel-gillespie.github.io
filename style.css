@@ -47,10 +47,11 @@ a:hover {
 
 /* Header & Navigation Styles */
 header {
-    background-color: var(--color-dark-teal);
-    color: var(--color-light-gray);
+    background-color: var(--color-light-gray); /* Changed to light gray for background */
+    color: var(--color-dark-plum); /* Text color */
     padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Lighter shadow */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle bottom border */
 }
 
 nav {
@@ -62,10 +63,12 @@ nav {
     padding: 0 20px;
 }
 
+/* Adjust logo styling */
 .logo a {
-    color: var(--color-light-gray);
-    font-size: 1.8rem;
-    font-weight: bold;
+    color: var(--color-dark-plum); /* Logo text color */
+    font-family: 'Times New Roman', serif; /* Simulating the handwritten font style */
+    font-size: 1.5rem; /* Smaller font size for logo */
+    font-weight: normal; /* Normal weight for the script-like font */
     text-decoration: none;
 }
 
@@ -77,50 +80,193 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 30px; /* Increased space between nav items */
 }
 
 nav ul li a {
-    color: var(--color-light-gray);
-    font-weight: bold;
-    padding: 5px 10px;
+    color: var(--color-dark-plum); /* Nav link color */
+    font-weight: normal; /* Normal weight for navigation */
+    padding: 5px 0; /* Adjust padding */
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--color-green);
-    text-decoration: none;
+    color: var(--color-indigo); /* Hover color */
+    text-decoration: none; /* No underline on hover */
 }
 
 /* Hero Section Styles */
 #hero {
     text-align: center;
     padding: 100px 20px;
-    background-color: var(--color-light-gray); /* Consider changing this for more contrast */
-    color: var(--color-dark-plum);
+    background-color: var(--color-indigo); /* Background color from image */
+    color: var(--color-light-gray); /* Text color for hero section */
+    min-height: 400px; /* Ensure sufficient height */
+    display: flex; /* Use flexbox to center content vertically */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    color: var(--color-dark-teal);
+    font-size: 4rem; /* Larger font size for "Welcome!" */
+    margin-bottom: 15px;
+    color: var(--color-light-gray); /* Welcome! text color */
 }
 
 #hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.5rem; /* Larger subheading */
+    margin-bottom: 40px; /* More space below paragraph */
+    color: var(--color-light-gray);
+    max-width: 700px; /* Limit width for readability */
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+}
+
+/* New Button Styles based on image */
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent; /* Default transparent border */
+}
+
+.button-dark {
+    background-color: var(--color-dark-plum); /* Dark button background */
+    color: var(--color-light-gray); /* Dark button text */
+    border-color: var(--color-dark-plum);
+}
+
+.button-dark:hover {
+    background-color: transparent; /* Transparent background on hover */
+    color: var(--color-dark-plum); /* Dark text on hover */
+    border-color: var(--color-dark-plum);
+}
+
+.button-light {
+    background-color: transparent; /* Light button background (transparent) */
+    color: var(--color-light-gray); /* Light button text */
+    border-color: var(--color-light-gray); /* Border for light button */
+}
+
+.button-light:hover {
+    background-color: var(--color-light-gray); /* Light background on hover */
+    color: var(--color-dark-plum); /* Dark text on hover */
+    border-color: var(--color-light-gray);
+}
+
+/* Skills Section Styles */
+#skills {
+    background-color: var(--color-indigo); /* Same background as hero for seamless transition */
+    color: var(--color-light-gray);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block; /* To allow padding around text for the line effect */
+    padding-bottom: 10px; /* Space for the underline */
+    color: var(--color-light-gray);
+}
+
+/* Optional: Add an underline effect for "My Skills" title */
+#skills h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px; /* Width of the underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: var(--color-green); /* Green underline */
+    border-radius: 2px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* Align text within skill items */
+}
+
+.skill-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.skill-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--color-green); /* Green heading for skills */
+}
+
+.skill-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-light-gray);
 }
 
 /* Footer Styles */
 footer {
-    background-color: var(--color-dark-plum);
-    color: var(--color-light-gray);
+    background-color: var(--color-light-gray); /* Light gray background for footer */
+    color: var(--color-dark-plum); /* Dark text color */
     text-align: center;
     padding: 1.5rem 0;
-    margin-top: 50px; /* Provides some space above the footer */
+    margin-top: 0; /* Remove margin-top as skills section is full width */
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Basic Responsive Adjustments (for smaller screens) */
+.footer-content {
+    display: flex;
+    justify-content: center; /* Center items initially */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.footer-logo {
+    margin-right: 20px; /* Space between logo and copyright */
+}
+
+.logo-icon {
+    font-size: 2rem; /* Size of the star/flower icon */
+    color: var(--color-dark-plum); /* Color of the icon */
+}
+
+footer p {
+    margin: 0; /* Remove default paragraph margins */
+    font-size: 0.9rem;
+}
+
+.social-links {
+    margin-left: 20px; /* Space between copyright and social links */
+}
+
+.linkedin-icon {
+    font-size: 1.5rem; /* Size of the LinkedIn icon */
+    color: var(--color-dark-plum); /* Color of the icon */
+    /* If using a real icon font, you'd add font-family here */
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -129,17 +275,44 @@ footer {
 
     nav ul {
         margin-top: 15px;
+        flex-direction: column; /* Stack nav items vertically on small screens */
     }
 
     nav ul li {
-        margin: 0 10px;
+        margin: 5px 0; /* Adjust margin for stacked items */
+    }
+
+    .logo a {
+        font-size: 1.3rem; /* Adjust logo size */
     }
 
     #hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
     }
 
     #hero p {
-        font-size: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px;
+    }
+
+    #skills h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column for skills on small screens */
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-logo, .social-links {
+        margin: 10px 0; /* Adjust spacing */
     }
 }

@@ -22,18 +22,46 @@
         </nav>
     </header>
 
-    <main>
-        <section id="hero">
-            <h1>Hi, I'm Your Name</h1>
-            <p>A Graphic Design Student focused on Web Design, Development & UI/UX.</p>
-            <a href="portfolio.html" class="button">View My Work</a>
-        </section>
+<main>
+    <section id="hero">
+        <h1>Welcome!</h1>
+        <p>Visual Communications and Design Student Portfolio</p>
+        <div class="hero-buttons">
+            <a href="contact.html" class="button button-dark">Contact</a>
+            <a href="portfolio.html" class="button button-light">View My Work</a>
+        </div>
+    </section>
 
-        </main>
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>Web Design and Development</h3>
+                <p>Experienced in creating user-friendly and responsive websites using HTML, CSS, JavaScript, and more.</p>
+            </div>
+            <div class="skill-item">
+                <h3>UI/UX Design</h3>
+                <p>Passionate about crafting intuitive and engaging user interfaces and seamless user experiences.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Brand Design</h3>
+                <p>Skilled in developing visual identities that effectively communicate brand values and resonate with target audiences.</p>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <footer>
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <span class="logo-icon">&#10022;</span> 
+        </div>
         <p>&copy; <span id="current-year"></span> Rachel Gillespie. All rights reserved.</p>
-    </footer>
+        <div class="social-links">
+            <a href="#" target="_blank" aria-label="LinkedIn Profile"><span class="linkedin-icon">&#xe901;</span></a> 
+        </div>
+    </div>
+</footer>
 
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
