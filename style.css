@@ -270,7 +270,20 @@ footer p {
 }
 
 .social-links {
+    display: flex; /* Use flexbox to arrange icons horizontally */
+    gap: 15px; /* Space between icons */
     margin-left: 20px; /* Space between copyright and social links */
+}
+
+.social-links a {
+    color: var(--color-dark-plum); /* Default color for all social icons */
+    font-size: 1.5rem; /* Adjust icon size */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-indigo); /* Change color on hover */
+    transform: translateY(-2px); /* Subtle lift effect on hover */
 }
 
 @media (max-width: 768px) {
