@@ -438,6 +438,119 @@ footer p {
     font-weight: bold; /* Make the year bold */
 }
 
+/* General Page Layout for Portfolio Page */
+.portfolio-page {
+    padding-top: 50px; /* Space from the header */
+    background-color: var(--color-light-gray); /* Overall background */
+    color: var(--color-dark-plum); /* Default text color for this page */
+}
+
+/* Reusing page-intro styles from about page */
+/* .page-intro { ... already exists in style.css, will apply here too } */
+
+/* Projects Grid Section */
+.projects-grid-section .content-wrapper {
+    max-width: 1200px; /* Wider content for the grid */
+    margin: 0 auto;
+    padding: 40px 20px;
+    margin-bottom: 80px; /* Space below the grid */
+}
+
+.projects-grid {
+    display: grid;
+    /* Create a grid with 2 columns, adjust as needed */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 40px 30px; /* Vertical and horizontal gap */
+}
+
+.project-item {
+    display: block; /* Make the whole link block-level */
+    text-decoration: none;
+    color: inherit; /* Inherit text color from parent */
+    background-color: #fff; /* White background for each project card */
+    border-radius: 8px;
+    overflow: hidden; /* Ensures image corners are rounded */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-8px); /* Lift effect on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+.project-image {
+    width: 100%;
+    padding-bottom: 75%; /* Aspect ratio (4:3) - adjust as needed */
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 8px; /* Match parent border-radius */
+    border-top-right-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.project-item:hover .project-image {
+    transform: scale(1.03); /* Slightly zoom in on image on hover */
+}
+
+/* Placeholder images for projects - replace with your actual project thumbnails */
+/* Using gradients or solid colors from your palette for placeholders */
+.project-image-1 { background-image: linear-gradient(to bottom right, var(--color-indigo), var(--color-green)); }
+.project-image-2 { background-image: linear-gradient(to bottom left, var(--color-dark-teal), var(--color-indigo)); }
+.project-image-3 { background-image: linear-gradient(to top right, var(--color-green), var(--color-dark-plum)); }
+.project-image-4 { background-image: linear-gradient(to bottom left, var(--color-indigo), var(--color-dark-teal)); }
+.project-image-5 { background-image: linear-gradient(to top left, var(--color-green), var(--color-indigo)); }
+.project-image-6 { background-image: linear-gradient(to top right, var(--color-dark-teal), var(--color-green)); }
+.project-image-7 { background-image: linear-gradient(to bottom right, var(--color-dark-plum), var(--color-green)); }
+.project-image-8 { background-image: linear-gradient(to bottom left, var(--color-light-gray), var(--color-indigo)); }
+.project-image-9 { background-image: linear-gradient(to top left, var(--color-indigo), var(--color-green)); }
+.project-image-10 { background-image: linear-gradient(to bottom right, var(--color-dark-teal), var(--color-dark-plum)); }
+
+
+.project-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.project-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--color-dark-plum); /* Dark plum for project titles */
+}
+
+.project-info span {
+    font-size: 0.9rem;
+    color: #666; /* Lighter gray for the year */
+}
+
+/* Design Philosophy and Reach Out Section */
+.design-philosophy-contact-section {
+    background-color: var(--color-light-gray); /* Same as page background */
+    padding: 80px 0;
+}
+
+.design-philosophy-contact-section .content-wrapper {
+    max-width: 1200px; /* Match grid width */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Philosophy takes more space */
+    gap: 50px; /* Space between the two columns */
+    align-items: start;
+}
+
+.design-philosophy h2 {
+    font-size: 2.2rem;
+    color: var(--color-dark-plum);
+    margin-bottom: 20px;
+}
+
+.design-philosophy p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-dark-plum);
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -526,5 +639,37 @@ footer p {
 
     .experience-item span {
         margin-top: 5px; /* Space between company name and year */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        gap: 30px;
+    }
+
+    .project-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .design-philosophy-contact-section .content-wrapper {
+        grid-template-columns: 1fr; /* Stack philosophy and reach out sections */
+        gap: 40px;
+        padding: 40px 20px; /* Add padding for vertical stack */
+    }
+
+    .design-philosophy h2,
+    .reach-out h2 {
+        font-size: 1.8rem;
+    }
+
+    .design-philosophy p,
+    .reach-out ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive adjustments for Portfolio page */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust columns for slightly smaller screens */
     }
 }
