@@ -3,62 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rachel Gillespie</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rachel Gillespie - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <div class="logo">Rachel Gillespie</div>
         <nav>
+            <div class="logo">
+                <a href="index.html">Rachel Gillespie</a>
+            </div>
             <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome!</h1>
-            <p>Visual Communications and Design Student Portfolio</p>
-            <div class="hero-buttons">
-                <button class="contact-button" onclick="contact.html">Contact</button>
-                <button class="view-work-button" onclick="projects.html">View My Work</button>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section id="hero">
+            <h1>Hi, I'm Your Name</h1>
+            <p>A Graphic Design Student focused on Web Design, Development & UI/UX.</p>
+            <a href="portfolio.html" class="button">View My Work</a>
+        </section>
 
-    <section class="skills">
-        <h2>My Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Web Design and Development</h3>
-                <p>Experienced in creating user-friendly and responsive websites using HTML, CSS, JavaScript, and more.</p>
-            </div>
-            <div class="skill-card">
-                <h3>UI/UX Design</h3>
-                <p>Passionate about crafting intuitive and engaging user interfaces and seamless user experiences.</p>
-            </div>
-            <div class="skill-card">
-                <h3>Brand Design</h3>
-                <p>Skilled in developing visual identities that effectively communicate brand values and resonate with target audiences.</p>
-            </div>
-        </div>
-    </section>
+        </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="copyright">
-                <span class="logo-symbol"></span> © 2025 Rachel Gillespie. All rights reserved.
-            </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/rachelgillespie/" target="_blank"><span class="linkedin-icon"></span></a>
-            </div>
-        </div>
+        <p>&copy; <span id="current-year"></span> Rachel Gillespie. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
