@@ -263,10 +263,6 @@ footer {
     margin-right: 20px; /* Space between logo and copyright */
 }
 
-.logo-icon {
-    font-size: 2rem; /* Size of the star/flower icon */
-    color: var(--color-dark-plum); /* Color of the icon */
-}
 
 footer p {
     margin: 0; /* Remove default paragraph margins */
@@ -275,12 +271,6 @@ footer p {
 
 .social-links {
     margin-left: 20px; /* Space between copyright and social links */
-}
-
-.linkedin-icon {
-    font-size: 1.5rem; /* Size of the LinkedIn icon */
-    color: var(--color-dark-plum); /* Color of the icon */
-    /* If using a real icon font, you'd add font-family here */
 }
 
 @media (max-width: 768px) {
